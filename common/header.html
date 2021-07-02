@@ -1,2 +1,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<!-- respect "do not track"
+https://github.com/mozilla/discourse-mozilla-theme/blob/master/common/head_tag.html#L6
+-->
+<script>
+"use strict";function _dntEnabled(e,n){var t=e||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,a=n||navigator.userAgent,o=a.match(/Firefox\/(\d+)/),i=/MSIE|Trident/i.test(a),s=a.match(/Windows.+?(?=;)/g);return(!i||"function"==typeof Array.prototype.indexOf)&&"Enabled"===(t=o&&parseInt(o[1],10)<32?"Unspecified":i&&s&&-1!==["Windows NT 6.1","Windows NT 6.2","Windows NT 6.3"].indexOf(""+s)?"Unspecified":{0:"Disabled",1:"Enabled"}[t]||"Unspecified")}_dntEnabled()||(!function(e,n,t,a,o,i,s){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,i=n.createElement(t),s=n.getElementsByTagName(t)[0],i.async=1,i.src="https://www.google-analytics.com/analytics.js",s.parentNode.insertBefore(i,s)}(window,document,"script",0,"ga"),ga("create","UA-50638649-1","auto"),ga("send","pageview"));var userAgent=window.navigator&&navigator.userAgent||"";function detect(e){return e.test(userAgent)}function displayBanner(n,e,t){if(!detect(/Mobi/i)){"string"===$.type(e)&&(e=[e]),"string"===$.type(t)&&(t=[t]);for(var a=!1,o=0;o<e.length;o++){switch(e[o]){case"chrome":a=detect(/Chrome/)}if(a)break}a&&t.forEach(function(e){$("head").append("<style> .category-"+e+" .download-banner-"+n+" { display: block } </style>")})}}displayBanner("nightly","chrome","mozillians-nda"),document.addEventListener("keydown",function(e){"Tab"===e.key&&document.body.classList.add("focus-styles")});
+</script>
